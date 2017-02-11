@@ -1,0 +1,46 @@
+$namespace: '.board';
+
+#{$namespace} {
+  background: linear-gradient(135deg, $turquoise 0%, $green 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#{$namespace}__title {
+  background-color: $white-transparent;
+  border-bottom: $border-size solid $border-color;
+  color: $white;
+  flex: none;
+  margin: 0;
+  padding: $padding;
+  text-align: center;
+}
+
+#{$namespace}__content {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+#{$namespace}__list {
+  bottom: 0;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: $padding;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+#{$namespace}__list-item {
+  display: inline-block;
+  height: 100%;
+  width: $board-list-width;
+
+  & + & {
+    margin-left: $margin;
+  }
+}

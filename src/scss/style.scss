@@ -1,5 +1,5 @@
 // Configs
-// @import 'configs/variables';
+@import 'configs/variables';
 // @import 'configs/fonts';
 // @import 'configs/icons';
 @import 'configs/normalize';
@@ -8,8 +8,11 @@
 // Overrides
 // @import 'overrides/jqueryui-slider';
 
+// Animations
+@import 'animations/spin';
+
 // Atoms
-// @import 'atoms/buttons';
+@import 'atoms/spinner';
 // @import 'atoms/titles';
 // @import 'atoms/form-elements';
 // @import 'atoms/link';
@@ -20,7 +23,9 @@
 // @import 'partials/navigation';
 
 // Components
-// @import 'components/mainbox';
+@import 'components/board';
+@import 'components/list';
+@import 'components/ticket';
 
 // Pages
 // @import 'pages/landing-page';

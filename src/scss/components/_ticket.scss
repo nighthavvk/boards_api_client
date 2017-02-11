@@ -1,0 +1,20 @@
+$namespace: '.ticket';
+
+#{$namespace} {
+  background-color: $white;
+  border: $border-size solid $border-color;
+  border-radius: $border-radius;
+  padding: floor($padding / 2);
+}
+
+#{$namespace}__name {
+  font-size: $font-size-regular;
+  margin: 0 0 floor($margin / 2);
+}
+
+#{$namespace}__description {
+  color: lighten($font-color-basic, 20%);
+  font-size: $font-size-small;
+  margin: 0;
+  white-space: normal;
+}

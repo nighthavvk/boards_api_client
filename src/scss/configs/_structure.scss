@@ -4,6 +4,36 @@
 
 html,
 body {
-  font-family: Verdana, sans-serif;
+  color: $font-color-basic;
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-regular;
   height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+h1 {
+  font-size: $font-size-huge;
+}
+
+h2 {
+  font-size: $font-size-large;
+}
+
+h3 {
+  font-size: $font-size-big;
+}
+
+h4 {
+  font-size: $font-size-regular;
+}
+
+h5 {
+  font-size: $font-size-small;
+}
+
+h6 {
+  font-size: $font-size-tiny;
 }

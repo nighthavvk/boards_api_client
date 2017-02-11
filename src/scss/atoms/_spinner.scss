@@ -1,0 +1,47 @@
+$namespace: '.spinner';
+
+#{$namespace} {
+  align-items: center;
+  animation: spin 1s infinite linear;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+
+  &.-with-error {
+    animation: none;
+
+    #{$namespace}--icon {
+      display: none;
+    }
+
+    #{$namespace}--error-text {
+      display: block;
+    }
+  }
+}
+
+#{$namespace}--icon {
+  $size: 30px;
+  border-color: $green;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0 0 0 3px;
+  display: block;
+  height: $size;
+  width: $size;
+}
+
+#{$namespace}--error-text {
+  display: none;
+  text-align: center;
+
+  big,
+  small {
+    display: block;
+    margin: $margin 0;
+  }
+
+  small {
+    color: $red;
+  }
+}

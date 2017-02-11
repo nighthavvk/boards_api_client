@@ -1,0 +1,36 @@
+// Colors
+//-----------------------
+$white:             #fff;
+$white-transparent: rgba($white, .3);
+$black:             #000;
+$dark-gray:         #333;
+$gray:              #5f5f5f;
+$gray-light:        #fafafa;
+$green:             #19e273;
+$turquoise:         #49ddd8;
+$red:               red;
+
+// Typography
+//-----------------------
+$font-size-mini:    .4rem;
+$font-size-tiny:    .6rem;
+$font-size-small:   .8rem;
+$font-size-regular: 1rem;
+$font-size-big:     1.2rem;
+$font-size-large:   1.4rem;
+$font-size-huge:    2rem;
+
+$font-color-basic:  $dark-gray;
+
+// Metrics
+//-----------------------
+$margin:        14px;
+$padding:       14px;
+
+$border-radius: 3px;
+
+$border-size:   1px;
+$border-color:  rgba($white, .5);
+
+//Board
+$board-list-width: 280px;

@@ -1,0 +1,39 @@
+$namespace: '.list';
+
+#{$namespace} {
+  border: $border-size solid $border-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+#{$namespace}__title {
+  background-color: $white-transparent;
+  border-bottom: $border-size solid $border-color;
+  color: $white;
+  flex: none;
+  margin: 0;
+  padding: floor($padding / 2);
+}
+
+#{$namespace}__list {
+  background-color: $white-transparent;
+  flex: 1 1 auto;
+  list-style: none;
+  margin: 0;
+  overflow-y: auto;
+  padding: floor($padding / 2);
+}
+
+#{$namespace}__list-item {
+  list-style: none;
+
+  & + & {
+    margin-top: floor($margin / 2);
+  }
+}

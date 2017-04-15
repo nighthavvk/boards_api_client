@@ -7,14 +7,27 @@ $namespace: '.ticket';
   padding: floor($padding / 2);
 }
 
-#{$namespace}__name {
+#{$namespace}__name-wrapper {
   font-size: $font-size-regular;
   margin: 0 0 floor($margin / 2);
 }
 
-#{$namespace}__description {
+#{$namespace}__name {
+  font-size: 1em;
+  margin: 0;
+}
+
+#{$namespace}__description-wrapper {
   color: lighten($font-color-basic, 20%);
   font-size: $font-size-small;
+
+  .editable-field__field {
+    color: $gray;
+  }
+}
+
+#{$namespace}__description {
+  font-size: 1em;
   margin: 0;
   white-space: normal;
 }

@@ -564,6 +564,27 @@ h6 {
   color: red;
 }
 
+.editable-field__text {
+  cursor: pointer;
+}
+.editable-field__text:hover {
+  background-color: #fafafa;
+}
+
+.editable-field__field {
+  background-color: #fafafa;
+  border: 0;
+  height: 1.3em;
+  max-width: 100%;
+}
+.editable-field__field:focus {
+  outline: none;
+}
+
+textarea.editable-field__field {
+  height: 3em;
+}
+
 .board {
   background: -webkit-linear-gradient(315deg, #49ddd8 0%, #19e273 100%);
   background: linear-gradient(135deg, #49ddd8 0%, #19e273 100%);
@@ -577,16 +598,31 @@ h6 {
   height: 100%;
 }
 
-.board__title {
+.board__title-wrapper {
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  margin: 0;
+  font-size: 1.4rem;
   padding: 14px;
   text-align: center;
+}
+.board__title-wrapper span {
+  display: inline-block;
+}
+.board__title-wrapper .editable-field__text:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.board__title-wrapper .editable-field__field {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.board__title {
+  font-size: 1em;
+  margin: 0;
 }
 
 .board__content {
@@ -637,15 +673,28 @@ h6 {
   overflow-y: auto;
 }
 
-.list__title {
+.list__title-wrapper {
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  font-size: 1.2rem;
   margin: 0;
   padding: 7px;
+}
+.list__title-wrapper .editable-field__text:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.list__title-wrapper .editable-field__field {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.list__title {
+  font-size: 1em;
+  margin: 0;
 }
 
 .list__list {
@@ -673,14 +722,30 @@ h6 {
   padding: 7px;
 }
 
-.ticket__name {
+.ticket__name-wrapper {
   font-size: 1rem;
   margin: 0 0 7px;
 }
 
-.ticket__description {
+.ticket__name {
+  font-size: 1em;
+  margin: 0;
+}
+
+.ticket__description-wrapper {
   color: #666666;
   font-size: 0.8rem;
+}
+.ticket__description-wrapper .editable-field__field {
+  color: #5f5f5f;
+}
+
+.ticket__description {
+  font-size: 1em;
   margin: 0;
   white-space: normal;
+}
+
+.hidden {
+  display: none !important;
 }

@@ -116,13 +116,15 @@ module.exports = function (grunt) {
     concat: {
       dev: {
         src: ['<%= project.src %>/js/vendor/*.js',
-              '<%= project.src %>/js/configs/*.js',
-              '<%= project.src %>/js/classes/abstract/*.js',
-              '<%= project.src %>/js/classes/api_clients/*.js',
-              '<%= project.src %>/js/classes/components/*.js',
-              '<%= project.src %>/js/classes/actions/*.js',
+              '<%= project.src %>/js/configs/namespaces.js',
+              '<%= project.src %>/js/configs/helpers.js',
               '<%= project.src %>/js/classes/*.js',
+              '<%= project.src %>/js/api_clients/*.js',
+              '<%= project.src %>/js/components/*.js',
+              '<%= project.src %>/js/actions/*.js',
               '<%= project.src %>/js/pages/*.js',
+              '<%= project.src %>/js/init/init_dom.js',
+              '<%= project.src %>/js/init/init_actions.js',
               '<%= project.src %>/js/*.js',
               '<%= project.src %>/js/tests/*.js'
              ],

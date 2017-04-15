@@ -1,0 +1,27 @@
+$namespace: '.editable-field';
+
+#{$namespace} {
+}
+
+#{$namespace}__text {
+  cursor: pointer;
+
+  &:hover {
+    background-color: $editable-field-bg;
+  }
+}
+
+#{$namespace}__field {
+  background-color: $editable-field-bg;
+  border: 0;
+  height: 1.3em;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea#{$namespace}__field {
+  height: 3em;
+}

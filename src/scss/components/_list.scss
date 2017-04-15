@@ -12,13 +12,31 @@ $namespace: '.list';
   overflow-y: auto;
 }
 
-#{$namespace}__title {
+#{$namespace}__title-wrapper {
   background-color: $white-transparent;
   border-bottom: $border-size solid $border-color;
   color: $white;
   flex: none;
+  font-size: $font-size-big;
   margin: 0;
   padding: floor($padding / 2);
+  
+  .editable-field__text {
+
+    &:hover {
+      background-color: $white-transparent;
+    }
+  }
+
+  .editable-field__field {
+    background-color: $white-transparent;
+    color: $white;
+  }
+}
+
+#{$namespace}__title {
+  font-size: 1em;
+  margin: 0;
 }
 
 #{$namespace}__list {

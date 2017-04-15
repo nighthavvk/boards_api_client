@@ -1,9 +1,9 @@
 // Abstract class
-function ApiClient() {
+BoardJS.Classes.ApiClient = function () {
   this.xhr = (window.XMLHttpRequest) ? new window.XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHttp");
 }
 
-ApiClient.prototype.request = function (method, url, callback, error) {
+BoardJS.Classes.ApiClient.prototype.request = function (method, url, callback, error) {
   this.xhr.onreadystatechange = function () {
     // this === this.xhr
     if (this.readyState === 4) {
@@ -22,6 +22,6 @@ ApiClient.prototype.request = function (method, url, callback, error) {
   this.xhr.send();
 }
 
-ApiClient.prototype.get = function (url, callback, error) {
+BoardJS.Classes.ApiClient.prototype.get = function (url, callback, error) {
   this.request('get', url, callback, error);
 }

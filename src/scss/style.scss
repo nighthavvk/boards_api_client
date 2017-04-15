@@ -13,6 +13,7 @@
 
 // Atoms
 @import 'atoms/spinner';
+@import 'atoms/editable-field';
 // @import 'atoms/titles';
 // @import 'atoms/form-elements';
 // @import 'atoms/link';
@@ -31,4 +32,4 @@
 // @import 'pages/landing-page';
 
 // Helpers
-// @import 'helpers/text-helper';
+@import 'helpers/visibility';

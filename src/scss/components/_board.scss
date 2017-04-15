@@ -7,14 +7,35 @@ $namespace: '.board';
   height: 100%;
 }
 
-#{$namespace}__title {
+#{$namespace}__title-wrapper {
   background-color: $white-transparent;
   border-bottom: $border-size solid $border-color;
   color: $white;
   flex: none;
-  margin: 0;
+  font-size: $font-size-large;
   padding: $padding;
   text-align: center;
+
+  span {
+    display: inline-block;
+  }
+
+  .editable-field__text {
+
+    &:hover {
+      background-color: $white-transparent;
+    }
+  }
+
+  .editable-field__field {
+    background-color: $white-transparent;
+    color: $white;
+  }
+}
+
+#{$namespace}__title {
+  font-size: 1em;
+  margin: 0;
 }
 
 #{$namespace}__content {

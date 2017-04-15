@@ -1,4 +1,4 @@
-var DragManager = new function() {
+BoardJS.Actions.DragManager = new function() {
 
   /**
    * составной объект для хранения информации о переносе:
@@ -9,6 +9,7 @@ var DragManager = new function() {
    *   shiftX/shiftY - относительный сдвиг курсора от угла элемента
    * }
    */
+
   var dragObject = {};
 
   var self = this;

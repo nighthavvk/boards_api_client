@@ -2,9 +2,8 @@
 BoardJS.Classes.Component = function (props, containerID) {
   this.containerID = (typeof containerID === 'undefined') ? null : containerID;
   this.props = props;
-
   this.id = this.props.id;
-  this.DOMid = "data-" + this.constructor.name.toLowerCase() + "=" + "'" + this.props.id + "'";
+  this.DOMid = "data-id=" + "'" + this.props.id + "'";
   this.state = new BoardJS.Classes.State();
 }
 

@@ -20,13 +20,13 @@ BoardJS.Components.Board.prototype.render = function () {
   var template = "<div class='board' " + this.DOMid + "> \
                     <div class='board__title-wrapper js-editable-field' \
                       data-placeholder='Set your Board title' \
-                      data-url=" + BoardJS.Configs.Api.BoardsUrl + this.id + " \
+                      data-url=" + BoardJS.Api.BoardsUrl + this.id + " \
                       data-type='PUT'> \
                       <span class='js-text-wrapper'> \
                         <h2 class='board__title editable-field__text js-text'>" + this.prepareValue(this.name) + "</h2> \
                       </span> \
                       <span class='js-field-wrapper hidden'> \
-                        <input class='editable-field__field js-field' name='board[name]' value=" +  this.prepareValue(this.name) + " /> \
+                        <input class='editable-field__field js-field' name='board[name]' /> \
                       </span> \
                     </div> \
                     <div class='board__content'> \

@@ -115,14 +115,21 @@ module.exports = function (grunt) {
      */
     concat: {
       dev: {
-        src: ['<%= project.src %>/js/vendor/*.js',
+        src: ['<%= project.src %>/js/vendor/jquery-3.2.1.js',
+              '<%= project.src %>/js/vendor/jquery.cookie.js',
+              '<%= project.src %>/js/vendor/jquery-deparam.js',
+              '<%= project.src %>/js/vendor/pubsub.js',
+              '<%= project.src %>/js/vendor/jquery.j-toker.js',
+              '<%= project.src %>/js/vendor/jquery.routes.js',
+              '<%= project.src %>/js/vendor/jquery-ui.js',
               '<%= project.src %>/js/configs/namespaces.js',
               '<%= project.src %>/js/configs/helpers.js',
+              '<%= project.src %>/js/configs/auth.js',
               '<%= project.src %>/js/classes/*.js',
               '<%= project.src %>/js/api_clients/*.js',
               '<%= project.src %>/js/components/*.js',
               '<%= project.src %>/js/actions/*.js',
-              '<%= project.src %>/js/pages/*.js',
+              '<%= project.src %>/js/pages/{,*/}*.js',
               '<%= project.src %>/js/init/init_dom.js',
               '<%= project.src %>/js/init/init_actions.js',
               '<%= project.src %>/js/*.js',

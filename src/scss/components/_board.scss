@@ -13,7 +13,7 @@ $namespace: '.board';
   color: $white;
   flex: none;
   font-size: $font-size-large;
-  padding: $padding;
+  padding: ($padding - $editable-field-padding) $padding;
   text-align: center;
 
   span {
@@ -36,6 +36,7 @@ $namespace: '.board';
 #{$namespace}__title {
   font-size: 1em;
   margin: 0;
+  padding: $editable-field-padding;
 }
 
 #{$namespace}__content {

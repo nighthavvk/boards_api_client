@@ -18,9 +18,9 @@ $namespace: '.list';
   color: $white;
   flex: none;
   font-size: $font-size-big;
-  margin: 0;
-  padding: floor($padding / 2);
-  
+  margin: (- $editable-field-padding) (- $editable-field-padding) 0;
+  padding: floor($padding / 2) floor($padding / 2) (floor($padding / 2) - $editable-field-padding);
+
   .editable-field__text {
 
     &:hover {
@@ -37,6 +37,7 @@ $namespace: '.list';
 #{$namespace}__title {
   font-size: 1em;
   margin: 0;
+  padding: $editable-field-padding;
 }
 
 #{$namespace}__list {
@@ -53,5 +54,14 @@ $namespace: '.list';
 
   & + & {
     margin-top: floor($margin / 2);
+  }
+
+  &.-dragged + & {
+    margin-top: 0;
+  }
+
+  &.-placeholder {
+    background-color: $white-transparent;
+    border-radius: $border-radius;
   }
 }

@@ -20,13 +20,13 @@ BoardJS.Components.List.prototype.render = function () {
   var template = "<div class='list' " + this.DOMid + "> \
                     <div class='list__title-wrapper js-editable-field' \
                       data-placeholder='Set your List title' \
-                      data-url=" + BoardJS.Configs.Api.ListsUrl + this.id + " \
+                      data-url=" + BoardJS.Api.ListsUrl + this.id + " \
                       data-type='PUT'> \
                       <div class='js-text-wrapper'> \
                         <h3 class='list__title editable-field__text js-text'>" + this.prepareValue(this.name) + "</h3> \
                       </div> \
                       <div class='js-field-wrapper hidden'> \
-                        <input class='editable-field__field js-field' name='list[name]' value=" +  this.prepareValue(this.name) + " /> \
+                        <input class='editable-field__field js-field' name='list[name]' /> \
                       </div> \
                     </div> \
                     <ul class='list__list js-droppable'> \

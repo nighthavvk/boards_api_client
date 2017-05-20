@@ -4,22 +4,24 @@ $namespace: '.ticket';
   background-color: $white;
   border: $border-size solid $border-color;
   border-radius: $border-radius;
-  padding: floor($padding / 2);
+  padding: floor($padding / 2) floor($padding / 2) (floor($padding / 2) - $editable-field-padding);
 }
 
 #{$namespace}__name-wrapper {
   font-size: $font-size-regular;
-  margin: 0 0 floor($margin / 2);
+  margin: (- $editable-field-padding) (- $editable-field-padding) floor($margin / 2);
 }
 
 #{$namespace}__name {
   font-size: 1em;
   margin: 0;
+  padding: $editable-field-padding;
 }
 
 #{$namespace}__description-wrapper {
   color: lighten($font-color-basic, 20%);
   font-size: $font-size-small;
+  margin: (- $editable-field-padding) (- $editable-field-padding) 0;
 
   .editable-field__field {
     color: $gray;
@@ -29,5 +31,6 @@ $namespace: '.ticket';
 #{$namespace}__description {
   font-size: 1em;
   margin: 0;
+  padding: $editable-field-padding;
   white-space: normal;
 }

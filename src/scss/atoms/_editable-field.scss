@@ -14,8 +14,8 @@ $namespace: '.editable-field';
 #{$namespace}__field {
   background-color: $editable-field-bg;
   border: 0;
-  height: 1.3em;
   max-width: 100%;
+  padding: $editable-field-padding;
 
   &:focus {
     outline: none;

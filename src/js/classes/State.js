@@ -12,5 +12,5 @@ BoardJS.Classes.State.prototype.onUpdate = function (callback) {
 }
 
 BoardJS.Classes.State.prototype.update = function (nextProps) {
-  this.callback(extend(this.props, nextProps));
+  this.callback($.extend(this.props, nextProps));
 }

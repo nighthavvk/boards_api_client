@@ -1,27 +1,30 @@
 // Abstract class
 BoardJS.Classes.ApiClient = function () {
-  this.xhr = (window.XMLHttpRequest) ? new window.XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHttp");
 }
 
-BoardJS.Classes.ApiClient.prototype.request = function (method, url, callback, error) {
-  this.xhr.onreadystatechange = function () {
-    // this === this.xhr
-    if (this.readyState === 4) {
-      if (this.status === 200) {
-        if (typeof callback === 'function') {
-          callback(this.responseText, this);
-        };
-      } else {
-        if (typeof error === 'function') {
-          error(this.statusText, this);
-        };
-      }
-    };
+BoardJS.Classes.ApiClient.prototype.request = function (method, url, data, done, fail) {
+  ajaxData = {
+    method: method,
+    url: url,
+    data: data !== undefined || data !== null ? data : null
   };
-  this.xhr.open(method, url, true);
-  this.xhr.send();
+  $.ajax(ajaxData)
+  .done(function(data, textStatus, jqXHR) {
+    if (typeof done === 'function' && done !== undefined) {
+      done(data, textStatus, jqXHR)
+    }
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    if (typeof fail === 'function' && fail !== undefined) {
+      fail(jqXHR, textStatus, errorThrown)
+    }
+  });
 }
 
-BoardJS.Classes.ApiClient.prototype.get = function (url, callback, error) {
-  this.request('get', url, callback, error);
+BoardJS.Classes.ApiClient.prototype.get = function (url, data, done, fail) {
+  this.request('get', url, data, done, fail);
+}
+
+BoardJS.Classes.ApiClient.prototype.put = function (url, data, done, fail) {
+  this.request('put', url, data, done, fail);
 }

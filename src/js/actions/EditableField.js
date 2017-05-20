@@ -124,8 +124,10 @@ BoardJS.Actions.EditableField.prototype.fieldShow = function (data) {
   data.$textWrapper.addClass('hidden');
   data.$fieldWrapper.removeClass('hidden');
   data.$field.focus();
-  if (data.$field.val() === data.placeholder) {
+  if (data.$text.text() === data.placeholder) {
     data.$field.val('');
+  } else {
+    data.$field.val(data.$text.text());
   }
   return data.$field.on ('keydown', (function (_this) {
     return function (e) {
